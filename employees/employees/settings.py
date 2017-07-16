@@ -30,13 +30,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'emp.apps.EmpConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'emp',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -61,6 +62,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'todolist',
+        # 'USER' : 'root',
+        # 'PASSWORD' : 'jado2016asd',
+        #'HOST': '',
+        # 'PORT' : '',
     }
 }
 
