@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>details</title>
-  </head>
-  <body>
+{% extends 'partials/header.html' %}
+{% block content %}
+
+<a href="/todos">Home page</a>
+<br>
       <h1>{{todo.title}}</h1>
       <p>{{todo.text}}</p>
       <br>
       <h4>created on {{todo.created_at}}</h4>
-  </body>
-</html>
+{% endblock content %}

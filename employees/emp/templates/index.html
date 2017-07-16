@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Todolist application</title>
-  </head>
-  <body>
-    <header>
-      <h1>Todolist</h1>
-      <hr>
-    </header>
+{% extends 'partials/header.html' %}
+{% block content %}
+
     <ul>
         {% for todo in todos %}
           <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
         {% endfor %}
     </ul>
-  </body>
-</html>
+    <a href="/todos/add">Add Todo</a>
+{% endblock %}
