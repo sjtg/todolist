@@ -1,10 +1,29 @@
 {% extends 'partials/header.html' %}
 {% block content %}
 
-<a href="/todos">Home page</a>
+<table class="table table-bordered">
+  <th>
+    Title
+  </th>
+  <th>
+    Todo Task
+  </th>
+  <th>
+    Created on 
+  </th>
+  <tbody>
+    <th>
+      {{todo.title}}
+    </th>
+    <th>{{todo.text}}</th>
+    <th>{{todo.created_at}}</th>
+  </tbody>
+</table>
+<a href="/todos"><button type="submit" class="btn btn-default">Home</button></a>
+
 <br>
-      <h1>{{todo.title}}</h1>
-      <p>{{todo.text}}</p>
+      <h1></h1>
+      <p></p>
       <br>
-      <h4>created on {{todo.created_at}}</h4>
+      <h4></h4>
 {% endblock content %}

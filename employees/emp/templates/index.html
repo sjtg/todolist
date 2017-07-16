@@ -1,10 +1,26 @@
 {% extends 'partials/header.html' %}
 {% block content %}
 
-    <ul>
+
+
         {% for todo in todos %}
-          <li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a>: {{todo.text}}</li>
+        <table class="table table-bordered">
+          <th>
+            Title
+          </th>
+          <th>
+            Todo Task
+          </th>
+          <tbody>
+            <th>
+              <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>
+            </th>
+            <th>{{todo.text}}</th>
+          </tbody>
+        </table>
         {% endfor %}
-    </ul>
-    <a href="/todos/add">Add Todo</a>
+        <a href="/todos/add/"><button type="submit" class="btn btn-default">Add Task</button></a>
+
+
+
 {% endblock %}

@@ -1,17 +1,21 @@
 {% extends 'partials/header.html' %}
 {% block content %}
 
-  <form action="{% url 'add'%}" method="post">
-    {% csrf_token %}
 
-      <label for ="title">Title</lable>
-        <input type="text" name='title' id="title" />
-        <br>
-      <label for="text">Text</label>
-        <textarea name="text" id="text"></textarea>
-      <br>
-      <input type="submit" value="Submit" />
-      <br>
-      <a href="/todos">Back</a>
+  <form  action="{% url 'add'%}" method="post" >
+      {% csrf_token %}
+
+  <div class="form-group">
+    <label for ="title">Title</label>
+    <input class="form-control" type="text" name='title' id="title"  placeholder="Ttile">
+  </div>
+  <div class="form-group">
+    <label for="text">Text</label>
+    <textarea class="form-control" name="text" id="text" placeholder="Add Todo"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default" value="Submit" >Submit</button>
+  <button type="submit" class="btn btn-default"><a href="/todos">Back</a></button>
+
+</form>
 
 {% endblock content %}
