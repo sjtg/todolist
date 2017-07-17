@@ -80,9 +80,9 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'todolist',
-         'USER' : 'root',
-         'PASSWORD' : 'jado2016asd',
+         #'NAME': 'todolist' name of the database . For the is exercise am using todolist,
+        # 'USER' : '' username of the database,
+         #'PASSWORD' : '', put the passowrd of your database
         'HOST': '',
         'PORT' : '',
     }
